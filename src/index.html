@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<div lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hello Bulma!</title>
+        <style>
+            .section {
+                background-color: lightgray;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="hero is-bold is-primary is-fullheight">
+            <div class="columns">
+                <div class="column is-4">
+                    <div class="hero-head">
+                        <div class="container">
+                            <h1 class="title is-3">
+                                Попробуй задать провокационный вопрос...
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="column hero is-white is-fullheight">
+                    <div class="hero-head">
+                        <h1 class="title has-text-dark">
+                            Напиши вопрос!
+                        </h1>
+                        <form action="#" method="post" id="form">
+                            <div class="field">
+                                <div class="control">
+                                    <textarea class="textarea is-primary has-fixed-size" placeholder="Сюда текст вопроса..." rows="2" resize="none"></textarea>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="button is-primary is-bold" type="submit" value="Отправить" disabled>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="hero-body is-paddingless">
+                        <div class="container">
+                            <br>
+                            <h1 class="title has-text-dark">
+                                Ваши вопросы.
+                            </h1>
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title">
+                                        Вопрос №1
+                                    </p>
+                                    <a href="#" class="card-header-icon" aria-label="more options">
+                                        <span class="icon">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </header>
+                                <div class="card-content">
+                                    <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis
+                                        mauris.
+                                        <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+                                        <br>
+                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                    </div>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="#" class="card-footer-item">Delete</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
