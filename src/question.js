@@ -25,6 +25,33 @@ export class Question {
 
         list.innerHTML = html
     }
+    static fetch(token) {
+        if(!token) {
+            return Promise.resolve('<p>У вас нет токена!</p>')
+        }
+        return fetch(`https://question-js.firebaseio.com/question.json?auth=${ token }`)
+            .then(response => response.json())
+            .then(response => {
+                if(response && response.error) {
+                    return `<p>${ response.error }</p>`
+                }
+                return response 
+                    ? Object.keys(response).map(key => ({
+                        ...response[key],
+                        id: key
+                    })) 
+                    : []
+            })
+    }
+    static listToHTML(questions) {
+        if(typeof questions === 'string') {
+            return `<p>Ошибка: ${ questions }</p>`
+        } else {
+            return questions.length
+                ?   `<div class="content"><ol type="1">${ questions.map(q => `<li>${ q.text }</li>`).join('') }</ol></div>`
+                :   '<p>Вопросов пока нет...</p>'
+        }
+    }
 }
 
 function addToLocalStorage(question) {

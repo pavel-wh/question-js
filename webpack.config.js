@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
     entry: './src/app.js',
@@ -17,6 +18,10 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html'
+        }),
+        new Dotenv({
+          path: './.env', // Path to .env file (this is the default)
+          safe: false // load .env.example (defaults to "false" which does not use dotenv-safe)
         })
     ],
     module: {

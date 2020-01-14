@@ -4,3 +4,7 @@
 .column {
     padding: 1.5rem!important;
 }
+.content ol {
+    margin-left: 1rem!important;
+    word-wrap: break-word;
+}

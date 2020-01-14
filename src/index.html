@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<div lang="ru">
-
+<html lang="ru">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Hello Bulma!</title>
+        <title>Сборщик вопросов!</title>
         <style>
             .section {
                 background-color: lightgray;
@@ -19,7 +18,7 @@
                     <div class="hero-head">
                         <div class="container">
                             <h1 class="title is-3">
-                                Попробуй задать провокационный вопрос...
+                                Попробуй задать интересный вопрос...
                             </h1>
                             <button class="button is-success" id="modalBtn">Войти</button>
                         </div>
@@ -62,21 +61,23 @@
             <div class="modal-background"></div>
             <div class="modal-content">
                 <div class="box">
-                    <h3 class="title">Войти</h3>
-                    <div class="field">
-                        <div class="control">
-                            <input class="input is-large" type="email" placeholder="Email" autofocus="">
+                    <h3 class="title">Авторизация</h3>
+                    <form action="#" method="post" id="auth-form">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="email" placeholder="Email" autofocus="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <input class="input is-large" type="password" placeholder="Пароль">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="password" placeholder="Пароль">
+                            </div>
                         </div>
-                    </div>
-                    <button class="button is-block is-info is-large is-fullwidth">Войти</button>
+                        <button class="button is-block is-success is-large is-fullwidth">Войти</button>
                     </form>
                 </div>
             </div>
             <button class="modal-close is-large" aria-label="close"></button>
         </div>
     </body>
+</html>
